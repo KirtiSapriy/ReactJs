@@ -8,8 +8,8 @@ function App() {
 
   return (
     <>
-      <Header setSearch={setSearch}></Header>
-      
+      <Header setSearch={setSearch} search={Search}></Header>
+
       <MainRouter Search={Search} />
       <Footer></Footer>    </>
   )

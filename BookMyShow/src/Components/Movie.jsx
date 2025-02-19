@@ -6,10 +6,10 @@ function Movie({ Search }) {
         const [filterdata, setFilterdata] = useState([])
         const [Sort, setSort] = useState("all")
         const [Filter, setFilter] = useState("all")
+        let data = [...Data]
 
         useEffect(() => {
 
-                let data = [...Data]
 
                 if (Search.length > 0) {
                         data = Data.filter((el) => el.Name.toLowerCase().includes(Search.toLowerCase()))
@@ -25,10 +25,10 @@ function Movie({ Search }) {
                                 data = data.sort((a, b) => b.Name.localeCompare(a.Name))
                         }
                         if (Sort == "peice low-high") {
-                                data = data.sort((a, b) => b - a)
+                                data = data.sort((a, b) => a.Price - b.Price)
                         }
                         if (Sort == "peice high-low") {
-                                data = data.sort((a, b) => a - b)
+                                data = data.sort((a, b) => b.Price - a.Price)
                         }
                 }
 

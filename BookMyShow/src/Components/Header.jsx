@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router';
 import Logo from '../assets/Image/Logo.png';
-import { Search } from '@mui/icons-material';
+import { Search, Close } from '@mui/icons-material';
 
-const Header = ({ setSearch }) => {
+const Header = ({ setSearch, search }) => {
   return (
     <header>
       <div className="shadow-md h-14 grid grid-cols-3">
@@ -15,10 +15,11 @@ const Header = ({ setSearch }) => {
             <input
               placeholder="Search for Movies, Events, Plays, Sports and Activities"
               type="text"
-              className="border w-110 px-8 h-8 rounded border-[#e5e5e5]" onChange={(e) => setSearch(e.target.value)}
+              className="border w-110 px-8 h-8 rounded border-[#e5e5e5]" value={search} onChange={(e) => setSearch(e.target.value)}
             />
             <Search className="text-[#777777] left-3 absolute" />
-          </div>
+            {search.length != 0 ? < Close onClick={() => setSearch("")} className='absolute right-30' /> : ""
+            }</div>
         </div>
 
         <div className="grid grid-cols-2 py-3">
