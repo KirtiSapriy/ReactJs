@@ -1,3 +1,39 @@
 {
-  "products": []
+  "products": [
+    {
+      "id": "fb4f",
+      "url": "https://iili.io/dR1Eyiv.jpg",
+      "title": "nuevo title",
+      "price": " 1,200",
+      "category": "Clothes"
+    },
+    {
+      "id": "a34c",
+      "url": "https://iili.io/dR1kSbR.jpg",
+      "title": "Electronic Bronze Computer",
+      "price": "6,56",
+      "category": "Clothes"
+    },
+    {
+      "id": "e74d",
+      "url": "https://iili.io/dR9YBln.jpg",
+      "title": "Incredible Steel Mouse",
+      "price": "356",
+      "category": "Clothes"
+    },
+    {
+      "id": "ee28",
+      "url": "https://iili.io/dR1wqYv.jpg",
+      "title": "Practical Granite Pants",
+      "price": "655",
+      "category": "Clothes"
+    },
+    {
+      "id": "d61b",
+      "url": "https://iili.io/dR1Eyiv.jpg",
+      "title": "t-shirt",
+      "price": "280",
+      "category": "Clothes"
+    }
+  ]
 }
