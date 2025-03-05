@@ -11,7 +11,7 @@ function Main() {
     const dispatch = useDispatch()
     return (
         <>
-            <div className='h-146 w-full border'>
+            <div className='h-146 w-full '>
                 <div className='h-18 py-4  grid gap-4 grid-cols-2 place-items-center'>
                     <button className='border-2 border-pink-600 hover:bg-pink-600  font-semibold h-10 w-40 rounded-lg place-self-end' onClick={() => dispatch(setForm(true))}>Form</button>
                     <button className='border-2 border-pink-600 hover:bg-pink-600  font-semibold h-10 w-40 rounded-lg place-self-start' onClick={() => dispatch(setForm(false))}>Products</button>

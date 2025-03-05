@@ -40,9 +40,11 @@ export default function Form() {
     const addData = (p) => {
         p.preventDefault()
 
-        id != null ?
+        if (id != null) {
             dispatch(EditData({ ...obj, id: id }))
-            : dispatch(AddData(obj));
+        } else {
+            dispatch(AddData(obj));
+        }
         setObj
             ({
                 url: "",
