@@ -6,7 +6,7 @@ import { doc, getDoc } from 'firebase/firestore'
 export default function Deshborad() {
 
     const [uid, setUid] = useState('')
-    const [data, setData] = useState(null)
+    const [data, setData] = useState([])
 
     useEffect(() => {
         onAuthStateChanged(auth, (user) => {
@@ -27,15 +27,17 @@ export default function Deshborad() {
 
         await getDoc(doc(db, 'users', uid)).then((user) => {
             console.log(user.data());
-            setData(user.data().name)
+            setData(user.data())
         })
     }
 
+    console.log(data);
+
 
     return (
-        <div>
-            <h1 className='h-40 text-2xl'>Deshborad</h1>
-            <h1>Welcome ,{data}</h1>
+        <div className='h-auto w-full p-5 px-10 capitalize'>
+            <h1 className='h-18 text-2xl'>Deshborad</h1>
+            <h1 className='text-3xl mx-7 font-bold'>Welcome, {data.name}</h1>
         </div>
     )
 }

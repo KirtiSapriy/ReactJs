@@ -11,7 +11,7 @@ export default function Signin() {
   const navigate = useNavigate()
 
   const submit = async () => {
-    await signInWithEmailAndPassword(auth, Email, Pass).then((data) => console.log(data))
+    await signInWithEmailAndPassword(auth, Email, Pass)
       .then((user) => {
         Swal.fire({
           icon: 'success',
