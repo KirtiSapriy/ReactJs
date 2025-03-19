@@ -18,7 +18,7 @@ export default function Signin() {
           title: 'User SignIn',
           text: 'Uset SignIn Successfully'
         })
-        navigate('/Deshborad')
+        navigate('/deshborad')
 
       }).catch((err) => {
         Swal.fire({
