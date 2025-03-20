@@ -48,7 +48,7 @@ export default function Dashboard() {
             return;
         }
 
-        const currentDate = format(new Date(), "yyyy-MM-dd");
+        const currentDate = format(new Date(), "dd-MM-yyyy");
 
         if (editId != null) {
             await updateDoc(doc(db, "Task", editId), { task });
@@ -107,8 +107,8 @@ export default function Dashboard() {
         return true;
     });
 
-    const completedTasks = allData.filter(task => task.status).length;
-    const pendingTasks = allData.length - completedTasks;
+    const completedTasks = filteredData.filter(task => task.status).length;
+    const pendingTasks = filteredData.length - completedTasks;
     const dataChart = [
         { name: "Completed", value: completedTasks, color: "#2196F3" },
         { name: "Pending", value: pendingTasks, color: "#E91E63" }

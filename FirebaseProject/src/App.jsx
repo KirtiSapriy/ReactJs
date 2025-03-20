@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import SignUp from './Firebase/SignUp'
@@ -15,7 +13,7 @@ function App() {
       <Routes>
         <Route path='/' element={<SignUp />}></Route>
         <Route path="/signin" element={<Signin />}></Route>
-        <Route path="/deshborad" element={<Deshborad/>}></Route>
+        <Route path="/deshborad" element={<Deshborad />}></Route>
       </Routes>
 
     </BrowserRouter>
