@@ -1,9 +1,10 @@
 import { signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth'
 import React, { useState } from 'react'
 import { data, Link, useNavigate } from 'react-router-dom'
-import { auth } from '../../firebaseConfig'
+import { auth, db, provider } from '../../firebaseConfig'
 import Swal from 'sweetalert2'
 import Google from '../assets/Google.png'
+import { doc, setDoc } from 'firebase/firestore'
 
 
 
@@ -53,10 +54,10 @@ export default function Signin() {
         <input type="password" className='border-[1.2px] h-9 border-pink-700  rounded px-4 ' onChange={(e) => setPass(e.target.value)} placeholder='Enter User Password' id="" />
         <button onClick={submit} className='hover:bg-pink-700 hover:text-white font-semibold border border-pink-700 h-9 rounded w-5/12'>Sign In</button>
         <div className='grid grid-row-2 gap-2 place-items-center'>
-          <Link  to="/">You have new in web ? Sign up</Link>
+          <Link to="/">You have new in web ? Sign up</Link>
           <p className='flex items-center   justify-center w-11/12  gap-2 '> <hr className='border w-6/12  mt-1 border-[#353535]' /><span className='border-gray-600
         text-[#454545]'>  or</span> <hr className='border w-6/12 mt-1 border-[#353535]' /></p>
-          <button onClick={Signin} className='text-sky-600 w-full lg:w-7/12 flex items-center justify-center gap-2'><img src={Google} className='w-5' alt="" />Sign in with google</button>
+          <button onClick={Signin} className='text-sky-600 w-full lg:w-7/12 flex items-center justify-center gap-2'><img src={Google} className='w-5' alt="" />Sign In With Google</button>
         </div>
       </div>
     </div>

@@ -72,7 +72,7 @@ export default function SignUp() {
 
                     <p className='flex items-center   justify-center w-11/12  gap-2 '> <hr className='border w-6/12  mt-1 border-[#353535]' /><span className='border-gray-600
 text-[#454545]'>  or</span> <hr className='border w-6/12 mt-1 border-[#353535]' /></p>
-                    <button onClick={Signin} className='text-sky-600 w-full lg:w-7/12 flex items-center justify-center gap-2'><img src={Google} className='w-5' alt="" />Sign in with google</button>
+                    <button onClick={Signin} className='text-sky-600 w-full lg:w-7/12 flex items-center justify-center gap-2'><img src={Google} className='w-5' alt="" />Sign In With Google</button>
 
                 </div>
             </div>

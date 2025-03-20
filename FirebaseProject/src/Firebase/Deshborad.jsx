@@ -119,7 +119,7 @@ export default function Dashboard() {
             <h1 className="text-4xl font-bold text-center">Dashboard</h1>
             <h1 className="text-3xl mx-7 font-bold mt-5">Welcome, {data.name}</h1>
 
-            <div className="mt-5 p-4 rounded-lg bg-transparent grid border md:grid-cols-5">
+            <div className="mt-5 p-4 rounded-lg bg-transparent grid md:grid-cols-5">
                 <div className="flex flex-col sm:flex-row items-center gap-3 col-span-4 ">
                     <input
                         type="text"
@@ -184,7 +184,7 @@ export default function Dashboard() {
                 <input
                     type="text"
                     placeholder="Search task..."
-                    className="border rounded-lg p-2 w-full sm:w-6/12 md:w-4/12"
+                    className="border rounded-lg px-2 p-1 w-full sm:w-6/12 md:w-4/12"
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
                 />
