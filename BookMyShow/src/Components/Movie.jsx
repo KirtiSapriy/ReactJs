@@ -41,11 +41,6 @@ function Movie({ Search }) {
 
         }, [Data, Search, Filter, Sort])
 
-
-
-
-
-
         const Delete = (id) => {
                 let data = Data.filter((el, i) => { return el.Id != id })
 
@@ -53,10 +48,10 @@ function Movie({ Search }) {
                 setData(data)
         }
         return (
-                <div className='w-full'>
+                <div className='w-full relative'>
 
-                        <div className='h-11 my-2 w-11/12 mx-auto grid grid-cols-2 '>
-                                <div className='h-11/12 w-6/12  my-auto place-self-start py-1 px-3  grid grid-cols-4'><span className='place-self-start my-1'>Sort :</span>
+                        <div className='lg:h-11  my-2 w-8/12 lg:w-11/12 mx-auto grid grid-cols-2    '>
+                                <div className='h-11/12 w-11/12 lg:w-6/12  lg:my-auto lg:place-self-start py-1 px-3  grid lg:grid-cols-4'><span className='place-self-start my-1'>Sort :</span>
                                         <select className='col-span-3 capitalize border-[1.4px] px-2 py-1 rounded   border-[#e6364d]   ' onChange={(e) => setSort(e.target.value)} >
                                                 <optgroup label='Sort Option' className=''  >
                                                         <option value="All">all</option>
@@ -67,7 +62,7 @@ function Movie({ Search }) {
 
 
                                                 </optgroup></select></div>
-                                <div className='h-11/12 w-6/12  my-auto place-self-end py-1 px-3 grid grid-cols-4'><span className='place-self-start my-1'>Filter :</span>
+                                <div className='h-11/12 w-11/12 lg:w-6/12  lg:my-auto lg:place-self-end py-1 px-3 grid lg:grid-cols-4'><span className='place-self-start my-1'>Filter :</span>
                                         <select className='col-span-3 capitalize border-[1.4px] px-2 py-1 rounded  border-[#e6364d]    ' onChange={(e) => setFilter(e.target.value)} >
                                                 <optgroup label='Sort Option' className=''  >
                                                         <option value="all">all</option>
@@ -83,7 +78,7 @@ function Movie({ Search }) {
                                                 </optgroup></select>
                                 </div>
                         </div>
-                        <div className='grid w-11/12 x h-auto grid-cols-5  gap-8 m-auto overflow-x-scroll '>
+                        <div className='grid w-11/12 x h-auto grid-cols-2 md:grid-cols-3 lg:grid-cols-5  gap-8 m-auto overflow-x-scroll '>
                                 {
                                         filterdata.length == 0 ? <p>Data  Not Found</p> : filterdata.map((el, i) => {
                                                 return (
